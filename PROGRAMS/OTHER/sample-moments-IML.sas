@@ -22,6 +22,7 @@
 %let dentalPath = %sysfunc(tranwrd(&datPath2,OTHER,DENTAL));
 libname data "&dentalPath.";
 
+title "Sample Moments for the Dental Study Data";
 ods html path="&outPath." file="sample-moments.html";
 proc IML;
  /* read in dental data to matrix Y */
