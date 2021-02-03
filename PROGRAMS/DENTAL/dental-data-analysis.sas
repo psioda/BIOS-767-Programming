@@ -60,13 +60,16 @@ option papersize=("8.5in","11.0in") topmargin=0.1in rightmargin=0.1in leftmargin
 ods noptitle;
 ods pdf file = "&outpath.&slash.Dental-URMA-Analysis.pdf" nogtitle dpi=200;
 ods graphics / reset noborder;
-title1 j=c "Analysis of Distances (mm) -- Univariate Repeated Measures ANOVA";
-proc glm data = dat2.dental plots=all;
+title1 j=c "Analysis of Dental Study Data -- Univariate Repeated Measures ANOVA";
+
+
+proc glm data = dat2.dental;
  class gender;
  model age8 age10 age12 age14 = gender / nouni ;
- repeated age / nom;
+ repeated age / printe nom;
 run;
 quit;
+
 ods pdf close;
 
 /***************************************** Statistical Analysis -- MRMA *********************************/
