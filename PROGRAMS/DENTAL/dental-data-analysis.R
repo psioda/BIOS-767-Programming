@@ -17,3 +17,4 @@ attach(dental_vert)
 dental.aov <- aov(result ~ factor(gender)*factor(age) + Error(factor(id)))
 summary(dental.aov)
 detach(dental_vert)
+
