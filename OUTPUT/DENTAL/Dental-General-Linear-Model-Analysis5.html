@@ -1657,12 +1657,67 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX"></a>
 <table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
 <tr>
-<td class="c systemtitle">Analysis of Dental Study Data -- Multivariate ANOVA (MANOVA)</td>
+<td class="c systemtitle">Analysis of Dental Study Data -- Interpolation</td>
 </tr>
 </table><br>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure GLM: Class Levels">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Model Information">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Model Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Data Set</th>
+<td class="l data">WORK.DENTAL</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Dependent Variable</th>
+<td class="l data">distance</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Covariance Structure</th>
+<td class="l data">Compound Symmetry</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Subject Effect</th>
+<td class="l data">ID</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Group Effect</th>
+<td class="l data">GENDER</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Estimation Method</th>
+<td class="l data">REML</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Residual Variance Method</th>
+<td class="l data">None</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Fixed Effects SE Method</th>
+<td class="l data">Model-Based</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Degrees of Freedom Method</th>
+<td class="l data">Between-Within</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX1"></a>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Class Level Information">
 <colgroup>
 <col>
 </colgroup>
@@ -1684,105 +1739,51 @@ var _ie64 = _info.indexOf("x64") > 0
 <tr>
 <th class="l rowheader" scope="row">GENDER</th>
 <td class="r data">2</td>
-<td class="l data">F M</td>
+<td class="l data">M F</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">ID</th>
+<td class="r data">27</td>
+<td class="l data">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <br>
-<a name="IDX1"></a>
-<div>
-<div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure GLM: Number of Observations">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<tbody>
-<tr>
-<th class="l rowheader" scope="row">Number of Observations Read</th>
-<td class="r data">27</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">Number of Observations Used</th>
-<td class="r data">27</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<br>
-<p style="page-break-after: always;"><br/></p><hr size="3"/>
 <a name="IDX2"></a>
-<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
-<tr>
-<td class="c systemtitle">Analysis of Dental Study Data -- Multivariate ANOVA (MANOVA)</td>
-</tr>
-</table><br>
-<div class="c proctitle">Multivariate Analysis of Variance</div>
-<p>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure GLM: Characteristic Structure">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Dimensions">
 <colgroup>
-<col>
-<col>
-</colgroup>
-<colgroup>
-<col>
-<col>
 <col>
 <col>
 </colgroup>
 <thead>
 <tr>
-<th class="c b header" colspan="6" scope="colgroup">Characteristic Roots and Vectors of: E Inverse * H, where<br/>H = Type III SSCP Matrix for GENDER<br/>E = Error SSCP Matrix</th>
-</tr>
-<tr>
-<th class="r b header" rowspan="2" scope="col">Characteristic Root</th>
-<th class="r b header" rowspan="2" scope="col">Percent</th>
-<th class="l b header" colspan="4" scope="colgroup">Characteristic Vector  V&#39;EV=1</th>
-</tr>
-<tr>
-<th class="r b header" scope="col">age8</th>
-<th class="r b header" scope="col">age10</th>
-<th class="r b header" scope="col">age12</th>
-<th class="r b header" scope="col">age14</th>
+<th class="c b header" colspan="2" scope="colgroup">Dimensions</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th class="r rowheader" scope="row">0.66030051</th>
-<th class="r data">100.00</th>
-<td class="r data">0.01032388</td>
-<td class="r data" nowrap>-0.04593889</td>
-<td class="r data" nowrap>-0.01003125</td>
-<td class="r data">0.11841126</td>
+<th class="l rowheader" scope="row">Covariance Parameters</th>
+<td class="r data">4</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">0.00000000</th>
-<th class="r data">0.00</th>
-<td class="r data" nowrap>-0.07039943</td>
-<td class="r data">0.13377597</td>
-<td class="r data">0.00249339</td>
-<td class="r data" nowrap>-0.02943257</td>
+<th class="l rowheader" scope="row">Columns in X</th>
+<td class="r data">4</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">0.00000000</th>
-<th class="r data">0.00</th>
-<td class="r data" nowrap>-0.08397385</td>
-<td class="r data" nowrap>-0.01167207</td>
-<td class="r data">0.12114416</td>
-<td class="r data" nowrap>-0.04667529</td>
+<th class="l rowheader" scope="row">Columns in Z</th>
+<td class="r data">0</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">0.00000000</th>
-<th class="r data">0.00</th>
-<td class="r data">0.05246789</td>
-<td class="r data">0.05239507</td>
-<td class="r data">0.05062221</td>
-<td class="r data" nowrap>-0.09027154</td>
+<th class="l rowheader" scope="row">Subjects</th>
+<td class="r data">27</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Max Obs per Subject</th>
+<td class="r data">4</td>
 </tr>
 </tbody>
 </table>
@@ -1792,8 +1793,213 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX3"></a>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure GLM: Multivariate Tests">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Number of Observations">
 <colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Number of Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">108</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">108</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Not Used</th>
+<td class="r data">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX4"></a>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Iteration History">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Iteration History</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Iteration</th>
+<th class="r b header" scope="col">Evaluations</th>
+<th class="r b header" scope="col">-2&nbsp;Res&nbsp;Log&nbsp;Like</th>
+<th class="r b header" scope="col">Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">0</th>
+<td class="r data">1</td>
+<td class="r data">483.55911746</td>
+<td class="r data">&nbsp;</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="r data">1</td>
+<td class="r data">414.66636550</td>
+<td class="r data">0.00000000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX5"></a>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Convergence Status">
+<colgroup>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="c data">Convergence criteria met.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX6"></a>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Covariance Parameter Estimates">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Covariance Parameter Estimates</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Cov Parm</th>
+<th class="l b header" scope="col">Subject</th>
+<th class="l b header" scope="col">Group</th>
+<th class="r b header" scope="col">Estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Variance</th>
+<th class="l data">ID</th>
+<th class="l data">GENDER M</th>
+<td class="r data">2.8164</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">CS</th>
+<th class="l data">ID</th>
+<th class="l data">GENDER M</th>
+<td class="r data">2.6407</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Variance</th>
+<th class="l data">ID</th>
+<th class="l data">GENDER F</th>
+<td class="r data">0.6085</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">CS</th>
+<th class="l data">ID</th>
+<th class="l data">GENDER F</th>
+<td class="r data">4.2786</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX7"></a>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Fit Statistics">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fit Statistics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">-2 Res Log Likelihood</th>
+<td class="r data">414.7</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">AIC (Smaller is Better)</th>
+<td class="r data">422.7</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">AICC (Smaller is Better)</th>
+<td class="r data">423.1</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">BIC (Smaller is Better)</th>
+<td class="r data">427.8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX8"></a>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Null Model Likelihood Ratio Test">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="3" scope="colgroup">Null Model Likelihood Ratio Test</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">3</td>
+<td class="r data">68.89</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX9"></a>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Solution for Fixed Effects">
+<colgroup>
+<col>
 <col>
 </colgroup>
 <colgroup>
@@ -1805,49 +2011,160 @@ var _ie64 = _info.indexOf("x64") > 0
 </colgroup>
 <thead>
 <tr>
-<th class="c b header" colspan="6" scope="colgroup">MANOVA Test Criteria and Exact F Statistics for the Hypothesis of No Overall GENDER Effect<br/>H = Type III SSCP Matrix for GENDER<br/>E = Error SSCP Matrix<br/> <br/>S=1    M=1    N=10</th>
+<th class="c b header" colspan="7" scope="colgroup">Solution for Fixed Effects</th>
 </tr>
 <tr>
-<th class="l b header" scope="col">Statistic</th>
-<th class="r b header" scope="col">Value</th>
+<th class="l b header" scope="col">Effect</th>
+<th class="l b header" scope="col">gender</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">t&nbsp;Value</th>
+<th class="r b header" scope="col">Pr &gt; |t|</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">GENDER</th>
+<th class="l data">M</th>
+<td class="r data">16.3406</td>
+<td class="r data">1.1287</td>
+<td class="r data">25</td>
+<td class="r data">14.48</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">GENDER</th>
+<th class="l data">F</th>
+<td class="r data">17.3727</td>
+<td class="r data">0.8587</td>
+<td class="r data">25</td>
+<td class="r data">20.23</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time*GENDER</th>
+<th class="l data">M</th>
+<td class="r data">0.7844</td>
+<td class="r data">0.09382</td>
+<td class="r data">79</td>
+<td class="r data">8.36</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time*GENDER</th>
+<th class="l data">F</th>
+<td class="r data">0.4795</td>
+<td class="r data">0.05259</td>
+<td class="r data">79</td>
+<td class="r data">9.12</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX10"></a>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Type 3 Tests of Fixed Effects">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Type 3 Tests of Fixed Effects</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Effect</th>
+<th class="r b header" scope="col">Num DF</th>
+<th class="r b header" scope="col">Den DF</th>
 <th class="r b header" scope="col">F Value</th>
-<th class="r b header" scope="col">Num&nbsp;DF</th>
-<th class="r b header" scope="col">Den&nbsp;DF</th>
 <th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;F</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th class="l rowheader" scope="row">Wilks&#39; Lambda</th>
-<td class="r data">0.60230061</td>
-<td class="r data">3.63</td>
-<td class="r data">4</td>
-<td class="r data">22</td>
-<td class="r data">0.0203</td>
+<th class="l rowheader" scope="row">GENDER</th>
+<td class="r data">2</td>
+<td class="r data">25</td>
+<td class="r data">309.43</td>
+<td class="r data">&lt;.0001</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Pillai&#39;s Trace</th>
-<td class="r data">0.39769939</td>
-<td class="r data">3.63</td>
-<td class="r data">4</td>
-<td class="r data">22</td>
-<td class="r data">0.0203</td>
+<th class="l rowheader" scope="row">time*GENDER</th>
+<td class="r data">2</td>
+<td class="r data">79</td>
+<td class="r data">76.53</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX11"></a>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="9" scope="colgroup">Estimates</th>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Hotelling-Lawley Trace</th>
-<td class="r data">0.66030051</td>
-<td class="r data">3.63</td>
-<td class="r data">4</td>
-<td class="r data">22</td>
-<td class="r data">0.0203</td>
+<th class="l b header" scope="col">Label</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">t&nbsp;Value</th>
+<th class="r b header" scope="col">Pr &gt; |t|</th>
+<th class="r b header" scope="col">Alpha</th>
+<th class="r b header" scope="col">Lower</th>
+<th class="r b header" scope="col">Upper</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Interpolation -- Male @ 11 years</th>
+<td class="r data">24.9688</td>
+<td class="r data">0.4572</td>
+<td class="r data">79</td>
+<td class="r data">54.61</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">0.05</td>
+<td class="r data">24.0587</td>
+<td class="r data">25.8788</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Roy&#39;s Greatest Root</th>
-<td class="r data">0.66030051</td>
-<td class="r data">3.63</td>
-<td class="r data">4</td>
-<td class="r data">22</td>
-<td class="r data">0.0203</td>
+<th class="l rowheader" scope="row">Interpolation -- Female @ 11 years</th>
+<td class="r data">22.6477</td>
+<td class="r data">0.6347</td>
+<td class="r data">79</td>
+<td class="r data">35.68</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">0.05</td>
+<td class="r data">21.3845</td>
+<td class="r data">23.9110</td>
 </tr>
 </tbody>
 </table>

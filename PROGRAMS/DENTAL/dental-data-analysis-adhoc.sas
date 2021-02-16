@@ -3,7 +3,7 @@
 *  PROGRAM DESCRIPTION: Analysis of data from the Dental Study;
 *                                                                   
 *-------------------------------------------------------------------
-*  JOB NAME:       dental-data-analysis.sas                                   
+*  JOB NAME:       dental-data-analysis-adhoc.sas                                   
 *  LANGUAGE:       SAS, VERSION 9.4                                  
 *                                                                   
 *  NAME:           Matthew Psioda                               
@@ -17,7 +17,7 @@
 *  DESCRIPTION OF MODIFICATION:  << Please insert 2-3 sentences >>                                                               
 ********************************************************************;
 %include "C:\USERS\PSIODA\DOCUMENTS\GITHUB\BIOS-767-PROGRAMMING\MACROS\SETUP.SAS";
-%setup(DENTAL-DATA-ANALYSIS,C:\USERS\PSIODA\DOCUMENTS\GITHUB\BIOS-767-PROGRAMMING);
+%setup(DENTAL-DATA-ANALYSIS-ADHOC,C:\USERS\PSIODA\DOCUMENTS\GITHUB\BIOS-767-PROGRAMMING);
 
 
 /***************************************** Statistical Analysis -- ADHOC *********************************/
@@ -53,36 +53,4 @@ proc print data = Adjustedp(drop=Parameter Biased) label noobs split='^';
 run;
 ods pdf close;
 
-
-
-/***************************************** Statistical Analysis -- URMA *********************************/
-option papersize=("8.5in","11.0in") topmargin=0.1in rightmargin=0.1in leftmargin=0.1in bottommargin=0.1in;
-ods noptitle;
-ods pdf file = "&outpath.&slash.Dental-URMA-Analysis.pdf" nogtitle dpi=200;
-ods graphics / reset noborder;
-title1 j=c "Analysis of Dental Study Data -- Univariate Repeated Measures ANOVA";
-
-
-proc glm data = dat2.dental;
- class gender;
- model age8 age10 age12 age14 = gender / nouni ;
- repeated age / printe nom;
-run;
-quit;
-
-ods pdf close;
-
-/***************************************** Statistical Analysis -- MRMA *********************************/
-option papersize=("8.5in","11.0in") topmargin=0.1in rightmargin=0.1in leftmargin=0.1in bottommargin=0.1in;
-ods noptitle;
-ods pdf file = "&outpath.&slash.Dental-MANOVA-Analysis.pdf" nogtitle dpi=200;
-ods graphics / reset noborder;
-title1 j=c "Analysis of Distances (mm) -- MANOVA";
-proc glm data = dat2.dental plots=all;
- class gender;
- model age8 age10 age12 age14 = gender / nouni ;
- repeated age / nou mstat=exact;
-run;
-quit;
-ods pdf close;
 

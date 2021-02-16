@@ -1,9 +1,9 @@
 *********************************************************************                             
 *                                                                   
-*  PROGRAM DESCRIPTION: Analysis of data from the Dental Study;
+*  PROGRAM DESCRIPTION: Process data from the CEBU Study;
 *                                                                   
 *-------------------------------------------------------------------
-*  JOB NAME:       dental-data-analysis-manova.sas                                   
+*  JOB NAME:       cebu-data.sas                                   
 *  LANGUAGE:       SAS, VERSION 9.4                                  
 *                                                                   
 *  NAME:           Matthew Psioda                               
@@ -17,24 +17,11 @@
 *  DESCRIPTION OF MODIFICATION:  << Please insert 2-3 sentences >>                                                               
 ********************************************************************;
 %include "C:\USERS\PSIODA\DOCUMENTS\GITHUB\BIOS-767-PROGRAMMING\MACROS\SETUP.SAS";
-%setup(DENTAL-DATA-ANALYSIS-MANOVA,C:\USERS\PSIODA\DOCUMENTS\GITHUB\BIOS-767-PROGRAMMING);
-option papersize=("8.5in","11.0in") topmargin=0.1in rightmargin=0.1in leftmargin=0.1in bottommargin=0.1in;
+%setup(CEBU-DATA,C:\USERS\PSIODA\DOCUMENTS\GITHUB\BIOS-767-PROGRAMMING);
 
-
-
-/*************************************************************************************
- *************************************************************************************
- *************************************************************************************
- *************************************************************************************
- ************************************************************************************/
-ods noptitle;
-ods html path = "&outpath." file="Dental-MANOVA-Analysis1.html";
-	title1 j=c "Analysis of Dental Study Data -- Multivariate ANOVA (MANOVA)";
-	proc glm data = dat2.dental;
-		class gender;
-		model age8 age10 age12 age14 = gender / nouni;
-		manova h=_all_;
-	run;
-	quit;
-ods html close;
-
+/** code to write CSV files from SAS **/
+data dat2.cebu;
+ infile "&datPath2.&slash.cebu.dat" dlm=' ' missover;
+ length id $20 ;
+ input id time age weight height brstfeed momht rural male ;
+run;
