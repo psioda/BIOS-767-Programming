@@ -90,8 +90,8 @@ title1 j=c "Analysis of Dental Study Data -- Test of Parallelism (MLE Approach)"
 proc mixed data = dental method=reml;
 	class gender(ref='F') id;
 	model distance = gender time*gender / noint solution;
-	repeated / subject=id type=un;
 	contrast "Parallelism" time*gender 1 -1;
+	repeated / subject=id type=un;
 run;
 quit;
 proc mixed data = dental method=reml;

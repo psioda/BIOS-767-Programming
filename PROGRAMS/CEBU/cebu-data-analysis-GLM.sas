@@ -1,6 +1,6 @@
 *********************************************************************                             
 *                                                                   
-*  PROGRAM DESCRIPTION: Visualize data from the CEBU Study;
+*  PROGRAM DESCRIPTION: Analyze data from the CEBU Study;
 *                                                                   
 *-------------------------------------------------------------------
 *  JOB NAME:       cebu-data-analysis-GLM.sas                                  
@@ -60,3 +60,31 @@ run;
 quit;
 ods html close;
 
+
+data cebu2;
+ set cebu;
+  visit  = time;
+run;
+
+ods html path = "&outpath." file="CEBU-General-Linear-Model-Analysis2.html" nogtitle;
+title1 j=c "Analysis of CEBU Study Data -- REML (Ordering Observations)";
+data cebu2;
+ set cebu;
+  visit  = time;
+run;
+
+proc mixed data = cebu method=reml noclprint plots=(none);
+	class male(ref='0') id;
+	model weight = time time*time male / solution ;
+	repeated / subject=id type=un rcorr=(1) ;
+run;
+quit;
+
+
+proc mixed data = cebu2 method=reml noclprint plots=(none);
+	class male(ref='0') visit id;
+	model weight = time time*time male / solution ;
+	repeated visit / subject=id type=un rcorr=(1);
+run;
+quit;
+ods html close;
