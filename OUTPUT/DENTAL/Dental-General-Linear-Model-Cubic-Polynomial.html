@@ -1657,12 +1657,12 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX"></a>
 <table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
 <tr>
-<td class="c systemtitle">Analysis of Dental Study Data -- REML via GLIMMIX using Linear Splines</td>
+<td class="c systemtitle">Analysis of Dental Study Data -- ML via PROC MIXED using Cubic Polynomial</td>
 </tr>
 </table><br>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Glimmix: Model Information">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Model Information">
 <colgroup>
 <col>
 <col>
@@ -1678,28 +1678,28 @@ var _ie64 = _info.indexOf("x64") > 0
 <td class="l data">WORK.DENTAL</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Response Variable</th>
+<th class="l rowheader" scope="row">Dependent Variable</th>
 <td class="l data">distance</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Response Distribution</th>
-<td class="l data">Gaussian</td>
+<th class="l rowheader" scope="row">Covariance Structure</th>
+<td class="l data">Compound Symmetry</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Link Function</th>
-<td class="l data">Identity</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">Variance Function</th>
-<td class="l data">Default</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">Variance Matrix Blocked By</th>
+<th class="l rowheader" scope="row">Subject Effect</th>
 <td class="l data">ID</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Estimation Technique</th>
-<td class="l data">Restricted Maximum Likelihood</td>
+<th class="l rowheader" scope="row">Estimation Method</th>
+<td class="l data">ML</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Residual Variance Method</th>
+<td class="l data">Profile</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Fixed Effects SE Method</th>
+<td class="l data">Model-Based</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Degrees of Freedom Method</th>
@@ -1713,7 +1713,7 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX1"></a>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Glimmix: Class Level Information">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Class Level Information">
 <colgroup>
 <col>
 </colgroup>
@@ -1750,29 +1750,7 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX2"></a>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Glimmix: Number of Observations">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<tbody>
-<tr>
-<th class="l rowheader" scope="row">Number of Observations Read</th>
-<td class="r data">108</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">Number of Observations Used</th>
-<td class="r data">108</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<br>
-<a name="IDX3"></a>
-<div>
-<div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Glimmix: Dimensions">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Dimensions">
 <colgroup>
 <col>
 <col>
@@ -1784,19 +1762,19 @@ var _ie64 = _info.indexOf("x64") > 0
 </thead>
 <tbody>
 <tr>
-<th class="l rowheader" scope="row">R-side Cov. Parameters</th>
-<td class="r data">10</td>
+<th class="l rowheader" scope="row">Covariance Parameters</th>
+<td class="r data">2</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Columns in X</th>
 <td class="r data">12</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Columns in Z per Subject</th>
+<th class="l rowheader" scope="row">Columns in Z</th>
 <td class="r data">0</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Subjects (Blocks in V)</th>
+<th class="l rowheader" scope="row">Subjects</th>
 <td class="r data">27</td>
 </tr>
 <tr>
@@ -1808,43 +1786,70 @@ var _ie64 = _info.indexOf("x64") > 0
 </div>
 </div>
 <br>
-<a name="IDX4"></a>
+<a name="IDX3"></a>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Glimmix: Optimization Information">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Number of Observations">
 <colgroup>
 <col>
 <col>
 </colgroup>
 <thead>
 <tr>
-<th class="c b header" colspan="2" scope="colgroup">Optimization Information</th>
+<th class="c b header" colspan="2" scope="colgroup">Number of Observations</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th class="l rowheader" scope="row">Optimization Technique</th>
-<td class="l data">Dual Quasi-Newton</td>
+<th class="l rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">350</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Parameters in Optimization</th>
-<td class="l data">10</td>
+<th class="l rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">108</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Lower Boundaries</th>
-<td class="l data">4</td>
+<th class="l rowheader" scope="row">Number of Observations Not Used</th>
+<td class="r data">242</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX4"></a>
+<div>
+<div align="center">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Iteration History">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Iteration History</th>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Upper Boundaries</th>
-<td class="l data">0</td>
+<th class="r b header" scope="col">Iteration</th>
+<th class="r b header" scope="col">Evaluations</th>
+<th class="r b header" scope="col">-2&nbsp;Log&nbsp;Like</th>
+<th class="r b header" scope="col">Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">0</th>
+<td class="r data">1</td>
+<td class="r data">477.48183083</td>
+<td class="r data">&nbsp;</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Fixed Effects</th>
-<td class="l data">Profiled</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">Starting From</th>
-<td class="l data">Data</td>
+<th class="r rowheader" scope="row">1</th>
+<td class="r data">1</td>
+<td class="r data">426.63293215</td>
+<td class="r data">0.00000000</td>
 </tr>
 </tbody>
 </table>
@@ -1854,36 +1859,13 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX5"></a>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Glimmix: Iteration History">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Convergence Status">
 <colgroup>
 <col>
-<col>
-<col>
-<col>
-<col>
-<col>
 </colgroup>
-<thead>
-<tr>
-<th class="c b header" colspan="6" scope="colgroup">Iteration History</th>
-</tr>
-<tr>
-<th class="r b header" scope="col">Iteration</th>
-<th class="r b header" scope="col">Restarts</th>
-<th class="r b header" scope="col">Evaluations</th>
-<th class="r b header" scope="col">Objective<br/>Function</th>
-<th class="r b header" scope="col">Change</th>
-<th class="r b header" scope="col">Max<br/>Gradient</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<th class="r rowheader" scope="row">0</th>
-<th class="r rowheader" scope="row">0</th>
-<td class="r data">4</td>
-<td class="r data">408.01849141</td>
-<td class="r data">.</td>
-<td class="r data" nowrap>6.91E-14</td>
+<td class="c data">Convergence criteria met.</td>
 </tr>
 </tbody>
 </table>
@@ -1893,13 +1875,34 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX6"></a>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Glimmix: Convergence Status">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Covariance Parameter Estimates">
+<colgroup>
+<col>
+<col>
+</colgroup>
 <colgroup>
 <col>
 </colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="3" scope="colgroup">Covariance Parameter Estimates</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Cov Parm</th>
+<th class="l b header" scope="col">Subject</th>
+<th class="r b header" scope="col">Estimate</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="c data">Convergence criterion (ABSGCONV=0.00001) satisfied.</td>
+<th class="l rowheader" scope="row">CS</th>
+<th class="l data">ID</th>
+<td class="r data">3.0420</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Residual</th>
+<th class="l data">&nbsp;</th>
+<td class="r data">1.8287</td>
 </tr>
 </tbody>
 </table>
@@ -1909,7 +1912,7 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX7"></a>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Glimmix: Fit Statistics">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Fit Statistics">
 <colgroup>
 <col>
 <col>
@@ -1921,36 +1924,20 @@ var _ie64 = _info.indexOf("x64") > 0
 </thead>
 <tbody>
 <tr>
-<th class="l rowheader" scope="row">-2 Res Log Likelihood</th>
-<td class="r data">408.02</td>
+<th class="l rowheader" scope="row">-2 Log Likelihood</th>
+<td class="r data">426.6</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">AIC  (smaller is better)</th>
-<td class="r data">428.02</td>
+<th class="l rowheader" scope="row">AIC (Smaller is Better)</th>
+<td class="r data">446.6</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">AICC (smaller is better)</th>
-<td class="r data">430.49</td>
+<th class="l rowheader" scope="row">AICC (Smaller is Better)</th>
+<td class="r data">448.9</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">BIC  (smaller is better)</th>
-<td class="r data">440.98</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">CAIC (smaller is better)</th>
-<td class="r data">450.98</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">HQIC (smaller is better)</th>
-<td class="r data">431.87</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">Generalized Chi-Square</th>
-<td class="r data">100.00</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">Gener. Chi-Square / DF</th>
-<td class="r data">1.00</td>
+<th class="l rowheader" scope="row">BIC (Smaller is Better)</th>
+<td class="r data">459.6</td>
 </tr>
 </tbody>
 </table>
@@ -1960,86 +1947,27 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX8"></a>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Glimmix: Covariance Parameter Estimates">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Null Model Likelihood Ratio Test">
 <colgroup>
 <col>
-<col>
-</colgroup>
-<colgroup>
 <col>
 <col>
 </colgroup>
 <thead>
 <tr>
-<th class="c b header" colspan="4" scope="colgroup">Covariance Parameter Estimates</th>
+<th class="c b header" colspan="3" scope="colgroup">Null Model Likelihood Ratio Test</th>
 </tr>
 <tr>
-<th class="l b header" scope="col">Cov Parm</th>
-<th class="l b header" scope="col">Subject</th>
-<th class="r b header" scope="col">Estimate</th>
-<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th class="l rowheader" scope="row">UN(1,1)</th>
-<th class="l data">ID</th>
-<td class="r data">5.4155</td>
-<td class="r data">1.5317</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">UN(2,1)</th>
-<th class="l data">ID</th>
-<td class="r data">2.7168</td>
-<td class="r data">1.0962</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">UN(2,2)</th>
-<th class="l data">ID</th>
-<td class="r data">4.1848</td>
-<td class="r data">1.1836</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">UN(3,1)</th>
-<th class="l data">ID</th>
-<td class="r data">3.9102</td>
-<td class="r data">1.4178</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">UN(3,2)</th>
-<th class="l data">ID</th>
-<td class="r data">2.9272</td>
-<td class="r data">1.1930</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">UN(3,3)</th>
-<th class="l data">ID</th>
-<td class="r data">6.4557</td>
-<td class="r data">1.8260</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">UN(4,1)</th>
-<th class="l data">ID</th>
-<td class="r data">2.7102</td>
-<td class="r data">1.1721</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">UN(4,2)</th>
-<th class="l data">ID</th>
-<td class="r data">3.3172</td>
-<td class="r data">1.1290</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">UN(4,3)</th>
-<th class="l data">ID</th>
-<td class="r data">4.1307</td>
-<td class="r data">1.4036</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">UN(4,4)</th>
-<th class="l data">ID</th>
-<td class="r data">4.9857</td>
-<td class="r data">1.4102</td>
+<td class="r data">1</td>
+<td class="r data">50.85</td>
+<td class="r data">&lt;.0001</td>
 </tr>
 </tbody>
 </table>
@@ -2049,9 +1977,8 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX9"></a>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Glimmix: Solutions for Fixed Effects">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Solution for Fixed Effects">
 <colgroup>
-<col>
 <col>
 <col>
 </colgroup>
@@ -2064,11 +1991,10 @@ var _ie64 = _info.indexOf("x64") > 0
 </colgroup>
 <thead>
 <tr>
-<th class="c b header" colspan="8" scope="colgroup">Solutions for Fixed Effects</th>
+<th class="c b header" colspan="7" scope="colgroup">Solution for Fixed Effects</th>
 </tr>
 <tr>
 <th class="l b header" scope="col">Effect</th>
-<th class="l b header" scope="col">tspline</th>
 <th class="l b header" scope="col">gender</th>
 <th class="r b header" scope="col">Estimate</th>
 <th class="r b header" scope="col">Standard<br/>Error</th>
@@ -2079,98 +2005,52 @@ var _ie64 = _info.indexOf("x64") > 0
 </thead>
 <tbody>
 <tr>
-<th class="l rowheader" scope="row">GENDER</th>
+<th class="l rowheader" scope="row">Intercept</th>
 <th class="l data">&nbsp;</th>
-<th class="l data">M</th>
-<td class="r data">27.4687</td>
-<td class="r data">0.5582</td>
+<td class="r data">8.8182</td>
+<td class="r data">47.5195</td>
 <td class="r data">25</td>
-<td class="r data">49.21</td>
-<td class="r data">&lt;.0001</td>
+<td class="r data">0.19</td>
+<td class="r data">0.8543</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">GENDER</th>
+<th class="l data">M</th>
+<td class="r data">42.4943</td>
+<td class="r data">61.7297</td>
+<td class="r data">25</td>
+<td class="r data">0.69</td>
+<td class="r data">0.4975</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">GENDER</th>
+<th class="l data">F</th>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time</th>
 <th class="l data">&nbsp;</th>
-<th class="l data">F</th>
-<td class="r data">24.0909</td>
-<td class="r data">0.6732</td>
-<td class="r data">25</td>
-<td class="r data">35.78</td>
-<td class="r data">&lt;.0001</td>
+<td class="r data">2.8939</td>
+<td class="r data">13.5252</td>
+<td class="r data">75</td>
+<td class="r data">0.21</td>
+<td class="r data">0.8312</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">tspline*GENDER</th>
-<th class="l data">1</th>
+<th class="l rowheader" scope="row">time*GENDER</th>
 <th class="l data">M</th>
-<td class="r data" nowrap>-4.5938</td>
-<td class="r data">0.5579</td>
-<td class="r data">25</td>
-<td class="r data" nowrap>-8.23</td>
-<td class="r data">&lt;.0001</td>
+<td class="r data" nowrap>-11.5424</td>
+<td class="r data">17.5698</td>
+<td class="r data">75</td>
+<td class="r data" nowrap>-0.66</td>
+<td class="r data">0.5132</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">tspline*GENDER</th>
-<th class="l data">1</th>
-<th class="l data">F</th>
-<td class="r data" nowrap>-2.9091</td>
-<td class="r data">0.6729</td>
-<td class="r data">25</td>
-<td class="r data" nowrap>-4.32</td>
-<td class="r data">0.0002</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">tspline*GENDER</th>
-<th class="l data">2</th>
-<th class="l data">M</th>
-<td class="r data" nowrap>-2.8594</td>
-<td class="r data">0.8204</td>
-<td class="r data">25</td>
-<td class="r data" nowrap>-3.49</td>
-<td class="r data">0.0018</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">tspline*GENDER</th>
-<th class="l data">2</th>
-<th class="l data">F</th>
-<td class="r data" nowrap>-1.2955</td>
-<td class="r data">0.9894</td>
-<td class="r data">25</td>
-<td class="r data" nowrap>-1.31</td>
-<td class="r data">0.2023</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">tspline*GENDER</th>
-<th class="l data">3</th>
-<th class="l data">M</th>
-<td class="r data" nowrap>-5.2500</td>
-<td class="r data">1.3374</td>
-<td class="r data">25</td>
-<td class="r data" nowrap>-3.93</td>
-<td class="r data">0.0006</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">tspline*GENDER</th>
-<th class="l data">3</th>
-<th class="l data">F</th>
-<td class="r data" nowrap>-3.0000</td>
-<td class="r data">1.6130</td>
-<td class="r data">25</td>
-<td class="r data" nowrap>-1.86</td>
-<td class="r data">0.0747</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">tspline*GENDER</th>
-<th class="l data">4</th>
-<th class="l data">M</th>
-<td class="r data">0</td>
-<td class="r data">.</td>
-<td class="r data">.</td>
-<td class="r data">.</td>
-<td class="r data">.</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">tspline*GENDER</th>
-<th class="l data">4</th>
+<th class="l rowheader" scope="row">time*GENDER</th>
 <th class="l data">F</th>
 <td class="r data">0</td>
 <td class="r data">.</td>
@@ -2179,9 +2059,26 @@ var _ie64 = _info.indexOf("x64") > 0
 <td class="r data">.</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">tspline*GENDER</th>
-<th class="l data">5</th>
+<th class="l rowheader" scope="row">time*time</th>
+<th class="l data">&nbsp;</th>
+<td class="r data" nowrap>-0.2216</td>
+<td class="r data">1.2547</td>
+<td class="r data">75</td>
+<td class="r data" nowrap>-0.18</td>
+<td class="r data">0.8603</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time*time*GENDER</th>
 <th class="l data">M</th>
+<td class="r data">1.0458</td>
+<td class="r data">1.6299</td>
+<td class="r data">75</td>
+<td class="r data">0.64</td>
+<td class="r data">0.5231</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time*time*GENDER</th>
+<th class="l data">F</th>
 <td class="r data">0</td>
 <td class="r data">.</td>
 <td class="r data">.</td>
@@ -2189,8 +2086,25 @@ var _ie64 = _info.indexOf("x64") > 0
 <td class="r data">.</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">tspline*GENDER</th>
-<th class="l data">5</th>
+<th class="l rowheader" scope="row">time*time*time</th>
+<th class="l data">&nbsp;</th>
+<td class="r data">0.006629</td>
+<td class="r data">0.03799</td>
+<td class="r data">75</td>
+<td class="r data">0.17</td>
+<td class="r data">0.8619</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time*time*time*GENDE</th>
+<th class="l data">M</th>
+<td class="r data" nowrap>-0.03007</td>
+<td class="r data">0.04935</td>
+<td class="r data">75</td>
+<td class="r data" nowrap>-0.61</td>
+<td class="r data">0.5442</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time*time*time*GENDE</th>
 <th class="l data">F</th>
 <td class="r data">0</td>
 <td class="r data">.</td>
@@ -2206,7 +2120,7 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX10"></a>
 <div>
 <div align="center">
-<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Glimmix: Type III Tests of Fixed Effects">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Mixed: Type 3 Tests of Fixed Effects">
 <colgroup>
 <col>
 </colgroup>
@@ -2218,7 +2132,7 @@ var _ie64 = _info.indexOf("x64") > 0
 </colgroup>
 <thead>
 <tr>
-<th class="c b header" colspan="5" scope="colgroup">Type III Tests of Fixed Effects</th>
+<th class="c b header" colspan="5" scope="colgroup">Type 3 Tests of Fixed Effects</th>
 </tr>
 <tr>
 <th class="l b header" scope="col">Effect</th>
@@ -2231,17 +2145,52 @@ var _ie64 = _info.indexOf("x64") > 0
 <tbody>
 <tr>
 <th class="l rowheader" scope="row">GENDER</th>
-<td class="r data">2</td>
+<td class="r data">1</td>
 <td class="r data">25</td>
-<td class="r data">2047.32</td>
-<td class="r data">&lt;.0001</td>
+<td class="r data">0.47</td>
+<td class="r data">0.4975</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">tspline*GENDER</th>
-<td class="r data">6</td>
-<td class="r data">25</td>
-<td class="r data">21.19</td>
-<td class="r data">&lt;.0001</td>
+<th class="l rowheader" scope="row">time</th>
+<td class="r data">1</td>
+<td class="r data">75</td>
+<td class="r data">0.11</td>
+<td class="r data">0.7442</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time*GENDER</th>
+<td class="r data">1</td>
+<td class="r data">75</td>
+<td class="r data">0.43</td>
+<td class="r data">0.5132</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time*time</th>
+<td class="r data">1</td>
+<td class="r data">75</td>
+<td class="r data">0.14</td>
+<td class="r data">0.7126</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time*time*GENDER</th>
+<td class="r data">1</td>
+<td class="r data">75</td>
+<td class="r data">0.41</td>
+<td class="r data">0.5231</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time*time*time</th>
+<td class="r data">1</td>
+<td class="r data">75</td>
+<td class="r data">0.12</td>
+<td class="r data">0.7343</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">time*time*time*GENDE</th>
+<td class="r data">1</td>
+<td class="r data">75</td>
+<td class="r data">0.37</td>
+<td class="r data">0.5442</td>
 </tr>
 </tbody>
 </table>
