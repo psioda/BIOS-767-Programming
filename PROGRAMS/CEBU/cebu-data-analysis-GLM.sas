@@ -35,7 +35,7 @@ proc mixed data = cebu method=reml noclprint plots=(none);
 run;
 quit;
 
-title1 j=c "Analysis of CEBU Study Data -- REML (Unstructured Covariance)";
+title1 j=c "Analysis of CEBU Study Data -- REML/Sandwich (Unstructured Covariance)";
 proc mixed data = cebu empirical method=reml noclprint plots=(none);
 	class male(ref='0') id;
 	model weight = time time*time male / solution ;
@@ -43,7 +43,7 @@ proc mixed data = cebu empirical method=reml noclprint plots=(none);
 run;
 quit;
 
-title1 j=c "Analysis of CEBU Study Data -- REML (CS Covariance Covariance)";
+title1 j=c "Analysis of CEBU Study Data -- REML (CS Covariance)";
 proc mixed data = cebu method=reml noclprint plots=(none);
 	class male(ref='0') id;
 	model weight = time time*time male / solution ;
@@ -51,7 +51,7 @@ proc mixed data = cebu method=reml noclprint plots=(none);
 run;
 quit;
 
-title1 j=c "Analysis of CEBU Study Data -- REML/Sandwhich (CS Covariance Covariance)";
+title1 j=c "Analysis of CEBU Study Data -- REML/Sandwich (CS Covariance)";
 proc mixed data = cebu empirical method=reml noclprint plots=(none);
 	class male(ref='0') id;
 	model weight = time time*time male / solution ;
