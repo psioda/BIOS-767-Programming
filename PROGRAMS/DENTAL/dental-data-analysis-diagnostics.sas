@@ -171,3 +171,36 @@ proc mixed data = dental method=reml plots(only)=InfluenceEstPlot;
 	repeated cTime / subject=id type=ar(1) r rcorr;
 run;
 quit;
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+/******************************** Random Effects Example *********************************/
+
+proc mixed data = dental method=reml plots(only)=InfluenceEstPlot;
+	class gender id;
+	model distance = gender time*gender / 
+        noint solution vciry influence(iter=10 effect=id est);
+	random intercept time / subject=id type=un;
+run;
+quit;
+
+
+proc mixed data = dental method=reml plots(only)=InfluenceEstPlot;
+	class gender id;
+	where id ^= 24;
+	model distance = gender time*gender / 
+        noint solution vciry influence(iter=10 effect=id est);
+	random intercept time / subject=id type=un;
+run;
+quit;
+
+
+proc mixed data = dental method=reml plots(only)=InfluenceEstPlot;
+	class gender id;
+	where id ^= 24;
+	model distance = gender time*gender / 
+        noint solution vciry influence(iter=10 effect=id est);
+	random intercept / subject=id type=un;
+run;
+quit;
