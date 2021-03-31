@@ -217,6 +217,7 @@ ods html close;
 ods html newfile=none;
 
 ods html select ParameterEstimates ModelInfo ;
+/** Equivalent to one quadrature point **/
 proc glimmix data = schiz method=laplace noclprint ;
 	class id;
 	model modWorse(event='1') = trt sqrtWeek trt*sqrtWeek  
@@ -242,6 +243,7 @@ proc glimmix data = schiz method=quad(qpoints=50) noclprint ;
 run;
  
 ods html select ParameterEstimates ModelInfo ;
+/** default = Residual Pseudo Likelihood **/
 proc glimmix data = schiz noclprint ;
 	class id;
 	model modWorse(event='1') = trt sqrtWeek trt*sqrtWeek  
