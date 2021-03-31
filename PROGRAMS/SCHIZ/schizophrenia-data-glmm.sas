@@ -17,7 +17,7 @@
 *  DESCRIPTION OF MODIFICATION:  << Please insert 2-3 sentences >>                                                               
 ********************************************************************;
 %include "C:\USERS\PSIODA\DOCUMENTS\GITHUB\BIOS-767-PROGRAMMING\MACROS\SETUP.SAS";
-%setup(SCHIZOPHRENIA-DATA-VISUALIZATION,C:\USERS\PSIODA\DOCUMENTS\GITHUB\BIOS-767-PROGRAMMING);
+%setup(SCHIZOPHRENIA-DATA-glmm,C:\USERS\PSIODA\DOCUMENTS\GITHUB\BIOS-767-PROGRAMMING);
 ods html newfile=proc;
 
 
@@ -207,3 +207,85 @@ proc sgplot data = work.PlotData noautolegend;
  yaxis display=(noticks novalues) label = 'Subject';
  xaxis label='Random Intercept';
 run;
+
+
+
+
+
+/*** compare estimation methods ***/
+ods html close;
+ods html newfile=none;
+
+ods html select ParameterEstimates ModelInfo ;
+proc glimmix data = schiz method=laplace noclprint ;
+	class id;
+	model modWorse(event='1') = trt sqrtWeek trt*sqrtWeek  
+     / solution dist=binary link=logit;
+	random intercept / subject=id;
+run; 
+
+ods html select ParameterEstimates ModelInfo ;
+proc glimmix data = schiz method=quad(qpoints=1) noclprint ;
+	class id;
+	model modWorse(event='1') = trt sqrtWeek trt*sqrtWeek  
+     / solution dist=binary link=logit;
+	random intercept / subject=id;
+run; 
+
+
+ods html select ParameterEstimates ModelInfo ;
+proc glimmix data = schiz method=quad(qpoints=50) noclprint ;
+	class id;
+	model modWorse(event='1') = trt sqrtWeek trt*sqrtWeek  
+     / solution dist=binary link=logit;
+	random intercept / subject=id;
+run;
+ 
+ods html select ParameterEstimates ModelInfo ;
+proc glimmix data = schiz noclprint ;
+	class id;
+	model modWorse(event='1') = trt sqrtWeek trt*sqrtWeek  
+     / solution dist=binary link=logit;
+	random intercept / subject=id;
+run; 
+
+ods html close;
+
+
+/*** compare quadrature points ***/
+%macro qPoints(qMax=5);
+ods html close;
+ods html newfile=none;
+
+	proc datasets library=work noprint;
+		delete PE;
+	run;
+	quit;
+
+	%do q = 1 %to &qMax.;
+		ods html exclude all;
+		ods output ParameterEstimates = PE&q.;
+		proc glimmix data = schiz method=quad(qpoints=&q.) noclprint ;
+			class id;
+			model modWorse(event='1') = trt sqrtWeek trt*sqrtWeek  
+		     / solution dist=binary link=logit;
+			random intercept / subject=id;
+		run;
+		ods html exclude none;
+
+		data PE&q.;
+		 set PE&q.;
+		  qPoints = &q.;
+		run;
+
+		proc append data = PE&q. base=PE force; run; quit;
+	%end;
+	
+	
+	proc sgplot data = PE;
+	 series x=qPoints y=Estimate / group=effect;
+	run;
+ods html close;
+%mend;
+
+%qPoints(qMax=8);
